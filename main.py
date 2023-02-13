@@ -5,27 +5,25 @@ __human_name__ = 'strings'
 # Add your code after this line
 ruud = 'Ruud Gullit'
 bast = 'Marco van Basten'
-goal_0 = '32'
-goal_1 = '54'
+goal_0 = 32
+goal_1 = 54
 
-scorers = f"{ruud} {goal_0}, {bast} {goal_1}"
+scorers = 'Ruud Gullit' + ' ' + str(goal_0) + ', Marco van Basten' + ' ' + str(goal_1)
 print(scorers)
 
-report = f"{ruud} scored in the {goal_0}nd minute \n{bast} scored in the {goal_1}th minute"
+report = f"{ruud} scored in the {str(goal_0)}nd minute\n{bast} scored in the {str(goal_1)}th minute"
 print(report)
 
-player = ['Ruud', 'Gullit']
-first_name = player[0]
-last_name_len = len(player[1])
-name_short = f"{player[0][0]}. {player[1]}"
+player = 'Ruud Gullit'
+first_name = player[:player.find(' ')]
+last_name = (player[player.find(' '):]) [1:]
+last_name_len = len(last_name)
+name_short = f"{first_name[0]}. {last_name}"
 
-x = len(player[0])
-ex = '!'
-chant = f"{player[0]}{ex}" * x
+
+first_name_len = len(first_name)
+chant = (f"{first_name}! " * first_name_len) [:-1]
 print(chant)
 
 good_chant = chant[-1] != ' '
 print(good_chant)
-
-
-
